@@ -15,8 +15,8 @@ admin.initializeApp({
 //     databaseURL: `https://${key.project_id}.firebaseio.com`
 // });
 
-// var db = admin.database();
-// var usersRef = db.ref("users");
+var db = admin.database();
+var usersRef = db.ref("users");
 
 
 const Posts = [
@@ -44,11 +44,12 @@ router.use((req, res, next) => {
 
 router.get('/', (req, res) => {
 
-  // let time = (new Date()).toJSON();
-  // usersRef.push({
-  //   msg: 'from auth-routes',
-  //   time: time
-  // });
+  console.log(usersRef);
+  let time = (new Date()).toJSON();
+  usersRef.push({
+    msg: 'from auth-routes - LIVE',
+    time: time
+  });
 
   return res.json({ result: 'Main Api Page!' })
 })

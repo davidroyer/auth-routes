@@ -46,10 +46,10 @@ router.get('/', (req, res) => {
 
   console.log(usersRef);
   let time = (new Date()).toJSON();
-  usersRef.push({
-    msg: 'from auth-routes - LIVE',
-    time: time
-  });
+  // usersRef.push({
+  //   msg: 'from auth-routes - LIVE',
+  //   time: time
+  // });
 
   return res.json({ result: 'Main Api Page!' })
 })

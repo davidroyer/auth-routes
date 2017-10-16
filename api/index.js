@@ -3,12 +3,12 @@ const router = express.Router()
 const admin = require('firebase-admin');
 // const key = require("../serviceAccountKey.json");
 // const cors = require('cors')({origin: true});
-// var serviceAccount = require("../serviceAccountKey.json");
-//
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: "https://nsf1-9e7ac.firebaseio.com"
-// });
+var serviceAccount = require("../serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://nsf1-9e7ac.firebaseio.com"
+});
 
 // admin.initializeApp({
 //     credential: admin.credential.cert(key),

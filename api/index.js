@@ -15,8 +15,8 @@ admin.initializeApp({
 //     databaseURL: `https://${key.project_id}.firebaseio.com`
 // });
 
-var db = admin.database();
-var usersRef = db.ref("users");
+// var db = admin.database();
+// var usersRef = db.ref("users");
 
 
 const Posts = [

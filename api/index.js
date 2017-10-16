@@ -51,7 +51,7 @@ router.get('/', (req, res) => {
   //   time: time
   // });
 
-  return res.json({ result: 'Main Api Page!' })
+  return res.json({ result: 'Main Api Page NEW!' })
 })
 
 router.get('/posts', (req, res) => {

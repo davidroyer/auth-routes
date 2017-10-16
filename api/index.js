@@ -3,20 +3,20 @@ const router = express.Router()
 const admin = require('firebase-admin');
 // const key = require("../serviceAccountKey.json");
 // const cors = require('cors')({origin: true});
-var serviceAccount = require("../serviceAccountKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://nsf1-9e7ac.firebaseio.com"
-});
+// var serviceAccount = require("../serviceAccountKey.json");
+//
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: "https://nsf1-9e7ac.firebaseio.com"
+// });
 
 // admin.initializeApp({
 //     credential: admin.credential.cert(key),
 //     databaseURL: `https://${key.project_id}.firebaseio.com`
 // });
 
-var db = admin.database();
-var usersRef = db.ref("users");
+// var db = admin.database();
+// var usersRef = db.ref("users");
 
 
 const Posts = [
@@ -44,11 +44,11 @@ router.use((req, res, next) => {
 
 router.get('/', (req, res) => {
 
-  let time = (new Date()).toJSON();
-  usersRef.push({
-    msg: 'from auth-routes',
-    time: time
-  });
+  // let time = (new Date()).toJSON();
+  // usersRef.push({
+  //   msg: 'from auth-routes',
+  //   time: time
+  // });
 
   return res.json({ result: 'Main Api Page!' })
 })

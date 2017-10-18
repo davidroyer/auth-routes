@@ -74,10 +74,10 @@ router.get('/', (req, res) => {
   var usersRef = db.ref("users");
   console.log(usersRef);
   let time = (new Date()).toJSON();
-  // usersRef.push({
-  //   msg: 'from auth-routes - LIVE',
-  //   time: time
-  // });
+  usersRef.push({
+    msg: 'from auth-routes - LIVE - Heroku',
+    time: time
+  });
 
   return res.json({ result: 'Main Api Page NEW!' })
 })

@@ -76,6 +76,12 @@
     string-format-obj "^1.0.0"
     through2 "^2.0.0"
 
+"@nuxtjs/dotenv@latest":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/dotenv/-/dotenv-1.1.0.tgz#18b4246fcbdf2c4c51fce03ed485fdc44b100c4c"
+  dependencies:
+    dotenv "^4.0.0"
+
 "@nuxtjs/youch@3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-3.0.2.tgz#03fff829ca45bd1c3ece84c08270f9686229dd4a"

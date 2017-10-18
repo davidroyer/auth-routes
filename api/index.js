@@ -1,10 +1,19 @@
 const express = require('express')
 const router = express.Router()
-const admin = require('firebase-admin');
-// const key = require("../serviceAccountKey.json");
+const admin = require('./init-firebase-admin.js');
+// const serviceAccount = require("./serviceAccountKey.json");
 // const cors = require('cors')({origin: true});
 // var serviceAccount = require("../serviceAccountKey.json");
 
+//
+// admin.initializeApp({
+//   credential: admin.credential.cert({
+//     projectId: "nsf1-9e7ac",
+//     clientEmail: "firebase-adminsdk-fk049@nsf1-9e7ac.iam.gserviceaccount.com",
+//     privateKey: ""
+//   }),
+//   databaseURL: "https://nsf1-9e7ac.firebaseio.com"
+// });
 //
 // let firebaseServiceAccount = {
 //   "type": "service_account",
@@ -34,8 +43,8 @@ const admin = require('firebase-admin');
 //     databaseURL: `https://${key.project_id}.firebaseio.com`
 // });
 
-// var db = admin.database();
-// var usersRef = db.ref("users");
+var db = admin.database();
+var usersRef = db.ref("users");
 
 
 const Posts = [
@@ -63,7 +72,7 @@ router.use((req, res, next) => {
 
 router.get('/', (req, res) => {
 
-  // console.log(usersRef);
+  console.log(usersRef);
   let time = (new Date()).toJSON();
   // usersRef.push({
   //   msg: 'from auth-routes - LIVE',

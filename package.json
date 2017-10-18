@@ -7,7 +7,8 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "firebase-admin": "^5.4.2",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "@nuxtjs/dotenv": "latest"
   },
   "scripts": {
     "dev": "nuxt",

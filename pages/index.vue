@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <navigation></navigation>
     <h1>Please login to see the secret content</h1>
     <form v-if="!$store.state.authUser" @submit.prevent="login">
       <p class="error" v-if="formError">{{ formError }}</p>
@@ -19,7 +20,11 @@
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
 export default {
+  components: {
+    Navigation
+  },
   data () {
     return {
       formError: null,

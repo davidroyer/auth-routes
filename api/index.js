@@ -43,8 +43,7 @@ const admin = require('./init-firebase-admin.js');
 //     databaseURL: `https://${key.project_id}.firebaseio.com`
 // });
 
-var db = admin.database();
-var usersRef = db.ref("users");
+
 
 
 const Posts = [
@@ -71,7 +70,8 @@ router.use((req, res, next) => {
 })
 
 router.get('/', (req, res) => {
-
+  var db = admin.database();
+  var usersRef = db.ref("users");
   console.log(usersRef);
   let time = (new Date()).toJSON();
   // usersRef.push({
